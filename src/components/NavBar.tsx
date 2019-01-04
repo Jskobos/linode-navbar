@@ -1,12 +1,20 @@
 import * as React from 'react';
 
+interface Link {
+
+}
 interface NavBarProps {
-  name: string;
+  links: Link[];
 }
 
 const NavBar: React.StatelessComponent<NavBarProps> = (props: NavBarProps) => {
-  const { name } = props;
-  return <div>Hello there {name}!</div>
+  const { links } = props;
+  return (
+    <div>
+
+
+    </div>
+  )
 }
 
 export default NavBar;

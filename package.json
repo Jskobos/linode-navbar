@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "description": "Reusable navigation for Linode's sites (developers.linode.com) ",
   "main": "builds/navbar.js",
+  "repository": "https://bitbucket.org/jskobos/linode-navbar",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack --config webpack.config.js"
@@ -16,7 +17,8 @@
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "tailwind": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

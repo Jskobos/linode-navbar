@@ -1,3 +1,9 @@
-@tailwind preflight
-@tailwind components
-@tailwind utilities
+@import "tailwindcss/preflight"
+@import "tailwindcss/components"
+@import "tailwindcss/utilities"
+
+.navbar-main
+  color: blue
+
+.nav-item
+  text-decoration: none

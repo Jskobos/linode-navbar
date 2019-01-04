@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry:  './src/wrapper.tsx',
+  entry:  ['./src/wrapper.tsx'],
   output: {
       libraryTarget: 'var',
       library: 'navbar',
@@ -28,11 +28,11 @@ module.exports = {
         },
         {
           test: /\.css$/,
-          use: [ 'css-loader', 'postcss-loader' ]
+          use: [ 'style-loader', 'postcss-loader' ]
         }
       ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.tsx', '.ts'],
+    extensions: ['.js', '.jsx', '.tsx', '.ts', '.css'],
   },
 };

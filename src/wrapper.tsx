@@ -1,8 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import NavBar from './components/NavBar';
+import './styles/index.css';
 
-export const showNavBar = (element: any, name: string) => {
-  ReactDOM.render(<NavBar name={name} />, element);
+import NavBar, { Link } from './components/NavBar';
+
+export const showNavBar = (element: any, links: Link[]) => {
+  ReactDOM.render(<NavBar links={links} />, element);
 };

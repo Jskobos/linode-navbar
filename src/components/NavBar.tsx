@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-interface Link {
-
+export interface Link {
+  target: string;
+  label: string;
 }
 interface NavBarProps {
   links: Link[];
@@ -10,10 +11,13 @@ interface NavBarProps {
 const NavBar: React.StatelessComponent<NavBarProps> = (props: NavBarProps) => {
   const { links } = props;
   return (
-    <div>
-
-
-    </div>
+    <nav>
+      {links.map(link =>
+        <a className={"main-nav-link text-BaseNavGrey hover:text-white relative"} href={link.target} role="menuitem">
+          {link.label}
+        </a>
+      )}
+    </nav>
   )
 }
 

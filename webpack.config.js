@@ -26,6 +26,10 @@ module.exports = {
           use: ["source-map-loader"],
           enforce: "pre"
         },
+        {
+          test: /\.css$/,
+          use: [ 'css-loader', 'postcss-loader' ]
+        }
       ]
   },
   resolve: {

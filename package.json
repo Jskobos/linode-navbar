@@ -1,5 +1,5 @@
 {
-  "name": "linode-navbar",
+  "name": "@kobonaut/linode-navbar",
   "version": "0.1.0",
   "description": "Reusable navigation for Linode's sites (developers.linode.com) ",
   "main": "builds/navbar.js",

@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Linode Navbar Demo Site</title>
+	</head>
+	<body onload="initialize()">
+		<div id="navbar-root"></div>
+	</body>
+		<script src="build/navbar.js" type="text/javascript" ></script>
+		<script>
+      var links = [
+        {
+          label: "API Documentation",
+          target: 'https://developers.linode.com/api/v4'
+        },
+        {
+          label: "Guides",
+          target: "https://developers.linode.com/guides"
+        },
+        {
+          label: "Libraries & Tools",
+          target: "https://developers.linode.com/tools"
+        },
+        {
+          label: "Changelog",
+          target: "https://developers.linode.com/changelog"
+        }
+      ]
+      function initialize() { navbar.showNavBar(document.getElementById('navbar-root'), links); }
+		</script>
+
+</html>

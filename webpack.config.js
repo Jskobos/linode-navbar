@@ -9,6 +9,10 @@ module.exports = {
       path:     path.resolve(__dirname, "build"),
       filename: 'navbar.js',
   },
+  devServer: {
+    contentBase: '.',
+    // publicPath:
+  },
   module: {
       rules: [
         {

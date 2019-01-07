@@ -42,7 +42,7 @@ const NavBar: React.StatelessComponent<NavBarProps> = (props: NavBarProps) => {
           </div>
             <nav className={"navbar-main"}>
               {links.map(link =>
-                <a className={"nav-item text-grey-light hover:text-white p-2 relative"} href={link.target} role="menuitem">
+                <a className={"nav-item text-grey hover:text-white p-2 relative"} href={link.target} role="menuitem">
                   {link.label}
                 </a>
               )}

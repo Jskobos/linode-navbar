@@ -18,3 +18,12 @@ In your HTML:
   <div id="navbar-root"></div>
 </body>
 ```
+
+## Development
+
+In order to modify the component(s) you'll need to do the following:
+
+- `git clone https://github.com/Jskobos/linode-navbar`
+- `git clone https://github.com/linode/linode-hugo-theme repos/linode-hugo-theme`
+- `npm install`
+- `npm run dev`

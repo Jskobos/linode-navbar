@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ShadowDOM from 'react-shadow';
 
+// const baseStyles = require('../../repos/linode-hugo-theme/srcCSS/components/0_utilities/typography.css');
 const styles = require('../styles/index.css');
 
 export interface Link {
@@ -17,7 +18,7 @@ const NavBar: React.StatelessComponent<NavBarProps> = (props: NavBarProps) => {
     <ShadowDOM>
       <div>
         <style type="text/css">{styles}</style>
-        <div className="header-wrapper bg-grey-darkest">
+        <div className="header-wrapper bg-light-black">
           <header className="header max-w-3xl mx-auto py-2 px-4 md:px-8 flex flex-wrap items-center justify-between">
           <div className="logo">
             <a href="https://www.linode.com" className="flex items-center">
@@ -40,9 +41,9 @@ const NavBar: React.StatelessComponent<NavBarProps> = (props: NavBarProps) => {
               </svg>
             </a>
           </div>
-            <nav className={"navbar-main"}>
+            <nav className={"main-nav"} role="menu">
               {links.map(link =>
-                <a className={"nav-item text-grey hover:text-white p-2 relative"} href={link.target} role="menuitem">
+                <a className={"main-nav-link text-BaseNavGrey hover:text-white relative"} href={link.target} role="menuitem">
                   {link.label}
                 </a>
               )}

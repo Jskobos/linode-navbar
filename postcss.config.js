@@ -1,19 +1,31 @@
 const tailwindcss = require('tailwindcss')
-const purgecss = require('@fullhuman/postcss-purgecss')
-const cssnano = require('cssnano')
-const autoprefixer = require('autoprefixer')
+const purgecss = require('@fullhuman/postcss-purgecss');
+const cssnano = require('cssnano');
+const autoprefixer = require('autoprefixer');
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g) || [];
+  }
+}
 
 module.exports = {
   plugins: [
-    // 'postcss-import': {},
-    // 'postcss-preset-env': {},
-    // 'cssnano': {},
     tailwindcss('./tailwind.js'),
+    autoprefixer({
+      browsers: ['last 2 versions', '> 2%']
+    }),
     cssnano({
       preset: 'default',
     }),
     purgecss({
-      content: ['./src/**/*.tsx']
-    }),
+      content: ['./src/**/*.tsx'],
+      extractors: [
+        {
+          extractor: TailwindExtractor,
+          extensions: ["tsx"]
+        }
+      ]
+    })
   ]
 }

@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack --config webpack.config.js",
-    "dev": "webpack-dev-server --open --watch"
+    "dev": "webpack-dev-server --open --watch-poll"
   },
   "keywords": [
     "Linode"
@@ -20,7 +20,8 @@
     "@types/react-dom": "^16.0.11",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-shadow": "^16.3.2"
+    "react-shadow": "^16.3.2",
+    "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -38,7 +39,6 @@
     "postcss-preset-env": "^6.5.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
-    "sugarss": "^2.0.0",
     "tailwindcss": "^0.7.3",
     "typescript": "^3.2.2",
     "webpack": "^4.28.3",

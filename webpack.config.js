@@ -12,7 +12,7 @@ module.exports = {
   },
   devServer: {
     // contentBase: '.',
-    publicPath: "/build/"
+    publicPath: "/build/",
   },
   module: {
       rules: [
@@ -20,9 +20,6 @@ module.exports = {
           test: /\.tsx?$/,
           include: [
             path.resolve(__dirname, "src")
-          ],
-          exclude: [
-            path.resolve(__dirname, "node_modules")
           ],
           loader: "babel-loader",
         },
@@ -34,7 +31,7 @@ module.exports = {
         {
           test: /\.css$/,
           use: [ 'css-loader', 'postcss-loader' ]
-        }
+        },
       ]
   },
   resolve: {

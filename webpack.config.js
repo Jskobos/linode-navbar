@@ -7,11 +7,12 @@ module.exports = {
       libraryTarget: 'var',
       library: 'navbar',
       path:     path.resolve(__dirname, "build"),
+      publicPath: path.resolve(__dirname, "/"),
       filename: 'navbar.js',
   },
   devServer: {
-    contentBase: '.',
-    // publicPath:
+    // contentBase: '.',
+    publicPath: "/build/"
   },
   module: {
       rules: [

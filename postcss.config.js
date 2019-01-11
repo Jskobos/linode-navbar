@@ -20,6 +20,7 @@ module.exports = {
     }),
     purgecss({
       content: ['./src/**/*.tsx'],
+      whitelist: ['open', 'main-nav', 'mobile-nav', 'active'],
       extractors: [
         {
           extractor: TailwindExtractor,

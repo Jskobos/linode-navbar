@@ -33,6 +33,8 @@ class NavBar extends React.Component<NavBarProps, State> {
       })
     }
 
+    const pathName = document.location.pathname;
+
     return (
       <ShadowDOM>
         <div>
@@ -68,7 +70,7 @@ class NavBar extends React.Component<NavBarProps, State> {
               </a>
               <nav className={`main-nav ${open ? 'open' : ''}`} role="menu">
                 {links.map(link =>
-                  <a className={`${'main-nav-link text-BaseNavGrey hover:text-white relative no-underline'} ${link.active && 'active'}`} href={link.target} role="menuitem">
+                  <a className={`${'main-nav-link text-BaseNavGrey hover:text-white relative no-underline'} ${pathName === link.target && 'active'}`} href={link.target} role="menuitem">
                     {link.label}
                   </a>
                 )}

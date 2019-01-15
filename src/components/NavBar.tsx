@@ -10,11 +10,11 @@ export interface Link {
   active: boolean;
 }
 
-interface NavBarProps {
+export interface NavBarProps {
   links: Link[];
 }
 
-interface State {
+export interface State {
   open: boolean;
 }
 

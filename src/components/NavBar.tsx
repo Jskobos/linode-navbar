@@ -18,7 +18,7 @@ interface State {
   open: boolean;
 }
 
-class NavBar extends React.Component<NavBarProps, State> {
+export class NavBar extends React.Component<NavBarProps, State> {
   state = {
     open: false
   }
@@ -27,7 +27,7 @@ class NavBar extends React.Component<NavBarProps, State> {
     const { links } = this.props;
     const { open } = this.state;
 
-    const toggleMenu = (e: any) => {
+    const toggleMenu = () => {
       this.setState({
         open: !this.state.open
       })

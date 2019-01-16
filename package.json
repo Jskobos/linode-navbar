@@ -1,6 +1,6 @@
 {
   "name": "@kobonaut/linode-navbar",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Reusable navigation for Linode's sites (developers.linode.com) ",
   "main": "builds/navbar.js",
   "repository": "https://bitbucket.org/jskobos/linode-navbar",

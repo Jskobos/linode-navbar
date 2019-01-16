@@ -2,7 +2,7 @@ import * as React from 'react';
 import ShadowDOM from 'react-shadow';
 
 const styles = require('../styles/index.css');
-const navStyles = require('../../repos/linode-hugo-theme/srcCSS/components/2_molecules/mobile-nav.css');
+// const navStyles = require('../../repos/linode-hugo-theme/srcCSS/components/2_molecules/mobile-nav.css');
 
 export interface Link {
   target: string;
@@ -39,7 +39,6 @@ export class NavBar extends React.Component<NavBarProps, State> {
       <ShadowDOM>
         <div>
           <style type="text/css">{styles}</style>
-          <style type="text/css" media="screen">{navStyles}</style>
           <div className="header-wrapper bg-light-black">
             <header className="header max-w-3xl mx-auto py-2 px-4 md:px-8 flex flex-wrap items-center justify-between">
               <div className="logo">
